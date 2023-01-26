@@ -1,0 +1,36 @@
+steps:
+- id: stop
+  name: gcr.io/cloud-builders/gcloud
+  args: [
+   'app',
+   'versions',
+   'stop',
+   'codimd-production-latest',
+   '--service',
+   'codimd-production',
+   '--project',
+   'smarthr-corporate',
+   '--quiet'
+  ]
+  timeout: 900s
+  waitFor:
+    - push
+- id: start
+  name: gcr.io/cloud-builders/gcloud
+  args: [
+   'app',
+   'versions',
+   'start',
+   'codimd-production-latest',
+   '--service',
+   'codimd-production',
+   '--project',
+   'smarthr-corporate',
+   '--quiet'
+  ]
+  timeout: 900s
+  waitFor:
+    - push
+options:
+  logging: CLOUD_LOGGING_ONLY
+timeout: 1200s
