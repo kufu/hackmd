@@ -28,6 +28,7 @@ env_variables:
   CMD_HSTS_MAX_AGE: sm://smarthr-corporate/codimd_staging_cmd_hsts_max_age
   CMD_HSTS_PRELOAD: sm://smarthr-corporate/codimd_staging_cmd_hsts_preload
   CMD_IMAGE_UPLOAD_TYPE: sm://smarthr-corporate/codimd_staging_cmd_image_upload_type
+  CMD_LOGLEVEL: sm://smarthr-corporate/codimd_staging_cmd_loglevel
   CMD_PORT: sm://smarthr-corporate/codimd_staging_cmd_port
   CMD_PROTOCOL_USESSL: sm://smarthr-corporate/codimd_staging_cmd_protocol_usessl
   CMD_S3_ACCESS_KEY_ID: sm://smarthr-corporate/codimd_staging_cmd_s3_access_key_id
@@ -41,7 +42,14 @@ env_variables:
   CMD_SESSION_LIFE: sm://smarthr-corporate/codimd_staging_cmd_session_life
   CMD_SESSION_SECRET: sm://smarthr-corporate/codimd_staging_cmd_session_secret
   CMD_USECDN: sm://smarthr-corporate/codimd_staging_cmd_usecdn
+  DB_HOST: sm://smarthr-corporate/codimd_staging_db_host
+  DB_NAME: sm://smarthr-corporate/codimd_staging_db_name
+  DB_PASSWORD: sm://smarthr-corporate/codimd_staging_db_password
+  DB_SERVER_NAME: sm://smarthr-corporate/codimd_staging_db_server_name
+  DB_SSL_ROOT_CERT: sm://smarthr-corporate/codimd_staging_db_ssl_root_cert
+  DB_SSL_CERT: sm://smarthr-corporate/codimd_staging_db_ssl_cert
+  DB_SSL_KEY: sm://smarthr-corporate/codimd_staging_db_ssl_key
+  DB_USER: sm://smarthr-corporate/codimd_staging_db_user
+  DB_MAX_CONNECTION: 700
   NODE_ENV: sm://smarthr-corporate/codimd_staging_node_env
   PGSSLMODE: sm://smarthr-corporate/codimd_staging_pgsslmode
-  CMD_LOGLEVEL: sm://smarthr-corporate/codimd_staging_cmd_loglevel
-  DB_MAX_CONNECTION: 700

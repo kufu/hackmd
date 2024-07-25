@@ -1,9 +1,9 @@
-FROM hackmdio/buildpack:node-10-95fb3df8 as BUILD
+FROM hackmdio/buildpack:16.20.2-35fe7e39 as BUILD
 
 COPY --chown=hackmd:hackmd . .
+ENV QT_QPA_PLATFORM=offscreen
 
 RUN set -xe && \
-    git reset --hard && \
     git clean -fx && \
     npm install && \
     npm run build && \
@@ -14,8 +14,9 @@ RUN set -xe && \
         package-lock.json webpack.prod.js webpack.htmlexport.js webpack.dev.js webpack.common.js \
         config.json.example README.md CONTRIBUTING.md AUTHORS node_modules
 
-FROM hackmdio/runtime:node-10-cjk-95fb3df8
+FROM hackmdio/runtime:16.20.2-35fe7e39
 USER hackmd
+ENV QT_QPA_PLATFORM=offscreen
 WORKDIR /home/hackmd/app
 COPY --chown=1500:1500 --from=BUILD /home/hackmd/app .
 

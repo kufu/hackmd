@@ -1,6 +1,143 @@
 Release Notes
 ===
 
+<i class="fa fa-tag"></i> 2.5.4 <i class="fa fa-clock-o"></i> 2024-06-06
+---
+
+[Check out the complete release note][v2_5_4]. Thank you CodiMD community and all our contributors. ❤️
+
+[v2_5_4]: https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_5_4
+
+## Enhancements
+
+- Add index at revision table for improving system performance [#1856](https://github.com/hackmdio/codimd/pull/1856)
+- Refactor to reuse random filename in filesystem image provider [#1867](https://github.com/hackmdio/codimd/pull/1867)
+
+## Fixes
+
+- Fix exclusion of name attribute from iframe filterXSS allowlist [#1865](https://github.com/hackmdio/codimd/pull/1865)
+- Fix typo: "opened source" -> "open sourced" [#1869](https://github.com/hackmdio/codimd/pull/1869)
+
+<i class="fa fa-tag"></i> 2.5.3 <i class="fa fa-clock-o"></i> 2024-01-08
+---
+
+[Check out the complete release note][v2_5_3]. Thank you CodiMD community and all our contributors. ❤️
+
+[v2_5_3]: https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_5_3
+
+It's a minor fix release that bumps the version number in `package.json`
+
+## Enhancements
+
+- Add `codeium-chrome` extension support [#1851](https://github.com/hackmdio/codimd/pull/1851)
+- Add `check-release` GitHub action workflow that prevents us from forgetting to update the `package.json` during releases again [#1852](https://github.com/hackmdio/codimd/pull/1852)
+
+<i class="fa fa-tag"></i> 2.5.2 <i class="fa fa-clock-o"></i> 2024-01-05
+---
+
+[Check out the complete release note][v2_5_2]. Thank you CodiMD community and all our contributors. ❤️
+
+[v2_5_2]: https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_5_2
+
+This is another recovery release that fixes the pandoc DoS issue.
+
+## Enhancements
+
+- Build docker image using github actions
+
+## Fixes
+
+- **\[Security Issue]** address denial of service issue in actionPandoc
+
+
+<i class="fa fa-tag"></i> 2.5.1 <i class="fa fa-clock-o"></i> 2024-01-03
+---
+
+[Check out the complete release note][v2_5_1]. Thank you CodiMD community and all our contributors. ❤️
+
+[v2_5_1]: https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_5_1
+
+
+## Security Fixes
+
+- **\[Security Issue]** Bump `@hackmd/pandoc.js` version to 0.2.0
+
+## Fixes
+
+- Replace mattermost-redux with mattermost/client
+- Fix dependency resolving with prom-client v12
+
+
+<i class="fa fa-tag"></i> 2.5.0 The Formosan hare <i class="fa fa-clock-o"></i> 2023-12-26
+---
+
+<div style="text-align: center; margin-bottom: 1em;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Lepus_sinensis_formosus.jpg/640px-Lepus_sinensis_formosus.jpg" width="600">
+  <small style="display: block;">The Formosan hare</small>
+</div>
+
+> The Formosan hare (scientific name: Lepus sinensis formosus), a species of the rabbit family, is a subspecies unique to Taiwan. It measures 30-40 centimeters in length, with a tail that's 5-6 centimeters long and ears that are 8-10 centimeters long. Smaller than the Chinese hare, it has brownish eyes.
+> [Wikipedia](https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E9%87%8E%E5%85%94?oldformat=true)
+
+[Check out the complete release note][v2_5_0]. Thank you CodiMD community and all our contributors. ❤️
+
+[v2_5_0]: https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_5_0
+
+## Security Fixes
+* **\[Security Issue]** Strip HTML tags for gist id to avoid stored XSS on showing error [Security Issue]
+* **\[Security Issue]** Upgrade mermaid to version 8.10.2 to avoid prototype pollution
+* **\[Security Issue]** potential XSS in vimeo embed
+* **\[Security Issue]** FIX: pandoc security issue
+* **\[Security Issue]** fix: sanitize pdf url to prevent XSS on inline PDFs
+
+## Fixes
+* Avoid append zero suffix on exporting user data
+* Handle when request url has no valid referer
+* Fix S3 client config passing for image upload
+* Set a proper "lang" attribute on <html>
+* Fix matchInContainer false positives
+* Convert "include" directives to functions
+* Move HTML-related code from JS to EJS to enable more i18n
+* fix: may referernce out of bound index in clearDuplicatedHistory
+* Feat/csrf export user data
+* sequelize.import deprecation
+* chore: remove unused uglifyjs-webpack-plugin dep
+* fix: should not clear guest history when guest pin note
+* Fix: s3 api supported multiple cloud providers. fixes: https://github.com/hackmdio/codimd/issues/1761
+* Fix: Code Fence parameter parsing
+* Update README.md to remove IE from supporting list
+* FIX: server crash when filename too long
+* fix: use encoded note id to update history
+* 🐛 [fix] modify replacement rule for disqus short-name
+* Fix history page nav
+* Fix the uploadimage form
+* Add the logout callback to prevent exception
+
+## Enhancements
+* Add TeX mhchem extensions for MathJax
+* Upgrade flowchart.js to version 1.15.0
+* Upgrade codemirror to 5.63.2
+* Update de.json in
+* Documentation - add Music section and move abc abd fretboard to this section
+* chore: bump meta-marked to 0.5.0
+* Typos + Better translation for "Externals"
+* feat: Migrate to gtag and support GA4
+* 【fix】reword japanese
+* upgrading pg to 8.8.0 to support new scram-sha-256 authentication
+* feat: add organizations whitelist to GitHub OAuth
+* Add oauth2 authorization
+* Update both Traditional and Simplified Chinese locales
+
+## DX
+* Run CI with GitHub Actions
+* Add dev container for GitHub Codespaces and VSCode remote container
+* Add arm64 docker image build.
+* fix(buildpacks): replace custom buildpack with APT buildpack
+* Update minimum required node.js version to v12 with npm package dependencies
+* Upgrade Node.js version
+* Update node.js version in .nvmrc
+* Update npm dependencies
+
 <i class="fa fa-tag"></i> 2.4.2 <i class="fa fa-clock-o"></i> 2022-08-06
 ---
 

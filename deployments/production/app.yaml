@@ -41,7 +41,15 @@ env_variables:
   CMD_SESSION_LIFE: sm://smarthr-corporate/codimd_production_cmd_session_life
   CMD_SESSION_SECRET: sm://smarthr-corporate/codimd_production_cmd_session_secret
   CMD_USECDN: sm://smarthr-corporate/codimd_production_cmd_usecdn
+  DB_HOST: sm://smarthr-corporate/codimd_production_db_host
+  DB_NAME: sm://smarthr-corporate/codimd_production_db_name
+  DB_PASSWORD: sm://smarthr-corporate/codimd_production_db_password
+  DB_SERVER_NAME: sm://smarthr-corporate/codimd_production_db_server_name
+  DB_SSL_ROOT_CERT: sm://smarthr-corporate/codimd_production_db_ssl_root_cert
+  DB_SSL_CERT: sm://smarthr-corporate/codimd_production_db_ssl_cert
+  DB_SSL_KEY: sm://smarthr-corporate/codimd_production_db_ssl_key
+  DB_USER: sm://smarthr-corporate/codimd_production_db_user
+  DB_MAX_CONNECTION: 700
   NODE_ENV: sm://smarthr-corporate/codimd_production_node_env
   PGSSLMODE: sm://smarthr-corporate/codimd_production_pgsslmode
   NODE_OPTIONS: --max-old-space-size=2000
-  DB_MAX_CONNECTION: 700
