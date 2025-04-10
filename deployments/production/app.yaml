@@ -17,6 +17,8 @@ manual_scaling:
 
 env_variables:
   CMD_ALLOW_ANONYMOUS: sm://smarthr-corporate/codimd_production_cmd_allow_anonymous
+  CMD_ALLOW_ANONYMOUS_EDITS: sm://smarthr-corporate/codimd_production_cmd_allow_anonymous_edits
+  CMD_ALLOW_ANONYMOUS_VIEWS: sm://smarthr-corporate/codimd_production_cmd_allow_anonymous_views
   CMD_ALLOW_EMAIL_REGISTER: sm://smarthr-corporate/codimd_production_cmd_allow_email_register
   CMD_CSP_ENABLE: sm://smarthr-corporate/codimd_production_cmd_csp_enable
   CMD_DB_URL: sm://smarthr-corporate/codimd_production_cmd_db_url
